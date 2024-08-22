@@ -22,6 +22,23 @@ local plugins = {
     end
   },
   {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "clangd",
+        "clang-format",
+        "codelldb",
+        "cpptools",
+        "tsserver",
+        "html",
+        "cssls",
+        "lua_ls",
+        "angularls",
+      },
+      automatic_installation = true
+    }
+  },
+  {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -31,6 +48,9 @@ local plugins = {
     opts = {
       handlers = {}
     },
+  },
+  {
+    "christoomey/vim-tmux-navigator", -- tmux/split window navigator
   },
   {
     "mfussenegger/nvim-dap",
@@ -53,16 +73,5 @@ local plugins = {
       require "custom.configs.lspconf"
     end,
   },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "clangd",
-        "clang-format",
-        "codelldb",
-        "cpptools",
-      }
-    }
-  }
 }
 return plugins
