@@ -20,6 +20,7 @@ lspconfig.clangd.setup {
   init_options = {
     clangdFileStatus = true,
   },
+--  root_dir = require'lspconfig'.util.root_pattern('.git', 'compile_commands.json', 'Makefile', '.')
 }
 
 -- TypeScript Server (tsserver)
